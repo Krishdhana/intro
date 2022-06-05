@@ -1,0 +1,53 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+
+
+
+.text-orange {
+    color: orangered;
+}
+
+.sidebar {
+    width: 80px;
+}
+
+.content{
+    width: 100%;
+    overflow-y: scroll;
+    margin-left: 2.5rem;
+}
+
+.row{
+    margin-right: 0;
+}
+
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 68, 0, 0.829);
+  border-radius: 100px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: orangered;
+}
+
+.btn {
+  background-color: transparent !important;
+  border-color: orangered !important;
+}
+
+.card {
+  background-color: transparent !important;
+  border: 2px solid  orangered !important;
+  border-radius: 50px !important;
+  // border-color: orangered !important;
+  color: orangered !important;
+  font-size: 1.1rem !important;
+}

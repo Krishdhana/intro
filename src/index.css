@@ -1,0 +1,26 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+
+#root {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: x-large;
+  /* background-color: #191919; */
+  /* color: whitesmoke; */
+  font-family: 'Ubuntu', "Roboto", sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+ 
+span{
+  color: orangered;
+}
