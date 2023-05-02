@@ -25,12 +25,11 @@ const About = () => {
         <div className="col-6 my-auto">
           <div>
             <p>
-              As a self-taught Developer, currently working as a Angular
-              developer in TVM Infotech Pvt Ltd, located in Chennai.
+              As a <span className="text-orange" >self-taught Developer</span>, currently working as a Frontend
+              developer at Habile Technologies, in Chennai.
             </p>
             <p>
-              Currently learning Flutter, which is powered by Dart language is
-              used to built beautiful mobile applications
+              As I am currently learning <span className="text-orange" >Springboot</span>, which is backend as I am always wanted to become a <span className="text-orange" >Fullstack developer</span> in near future.
             </p>
           </div>
           <div>

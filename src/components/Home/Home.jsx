@@ -3,7 +3,7 @@ import {motion} from 'framer-motion';
 
 import styles from "./Home.module.scss";
 import Animation from "../../shared/Animation/Animation";
-import KrishImg from "../../own-pics/home-1.webp";
+import KrishImg from "../../own-pics/mylogo.jpg";
 
 
 const Home = () => {
@@ -40,15 +40,17 @@ const Home = () => {
             <span>ana</span>
           </div>
           <div className={`${styles["info-text"]} fs-5 mt-3`}>
-            Currently as Angular Dev, I am seeking to Secure a responsible
+            Currently as Frontend Dev, I am seeking to Secure a responsible
             career opportunity to fully utilize my training and skills, while
             making a significant contribution to the success of the company.
           </div>
         </motion.div>
         <motion.div initial={{ y : '-100vh'}} animate={{y : 0}} transition={{type : 'spring', delay: 1}} className="col-6 my-auto">
-          <img
+          <motion.img
+            whileHover={{scale : 1.2}}
+            transition={{type : 'spring'}}
             src={KrishImg}
-            className={`${styles["img-path"]}`}
+            className={styles['img-round']}
             alt="Image of Krishna Dhana"
           />
         </motion.div>

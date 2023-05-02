@@ -8,19 +8,8 @@
   font-size: 1.2rem;
 }
 
-.img-path {
-  -webkit-clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
-    clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
-  height: 80vh;
-  width: 30vw;
-  transition: all 0.3s;
-  object-fit: cover;
-  &:hover{
-    transform: scale(105%);
-    // -webkit-animation: wobble-hor-bottom 3s infinite alternate both;
-	  //       animation: wobble-hor-bottom 3s infinite alternate both;
-    
-  }
+.img-round {
+  border-radius: 50%;
 }
 
 @-webkit-keyframes wobble-hor-bottom {
