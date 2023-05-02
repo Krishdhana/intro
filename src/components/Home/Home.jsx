@@ -1,10 +1,9 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
+import {motion} from 'framer-motion';
 
 import styles from "./Home.module.scss";
 import Animation from "../../shared/Animation/Animation";
-// import Home from "../../own-pics/home-1.webp";
-// import Home2 from ("../../own-pics/home-2.jpg");
-// import Home3 from ("../../own-pics/home-3.jpg");
+import KrishImg from "../../own-pics/home-1.webp";
 
 
 const Home = () => {
@@ -15,12 +14,6 @@ const Home = () => {
     else if (time >= 17 && time < 21) return "Good Evening :)";
     else return "Hope you have a nice Day:), Good Night";
   };
-
-  const imageArray = [
-    ("../../../src/own-pics/home-1.webp"),
-    ("../../../src/own-pics/home-2.jpg"),
-    ("../../../src/own-pics/home-3.jpg"),
-  ];
 
   let [activeImg, setActiveImg] = useState(0);
 
@@ -39,8 +32,8 @@ const Home = () => {
 
   return (
     <Animation>
-      <div className="row vh-100 text-center">
-        <div className="col-6 my-auto">
+      <div className="row vh-100 text-center overflow-hidden">
+        <motion.div initial={{ y : '100vh'}} animate={{y : 0}} transition={{type : 'spring'}} className="col-6 my-auto">
           <div className="mb-5">{getGreeting()}</div>
           <div className={`${styles.name}`}>
             Hi<span>,</span> This <span>is</span> Kri<span>shna</span> Dh
@@ -51,14 +44,14 @@ const Home = () => {
             career opportunity to fully utilize my training and skills, while
             making a significant contribution to the success of the company.
           </div>
-        </div>
-        <div className="col-6 my-auto">
+        </motion.div>
+        <motion.div initial={{ y : '-100vh'}} animate={{y : 0}} transition={{type : 'spring', delay: 1}} className="col-6 my-auto">
           <img
-            src={imageArray[activeImg]}
+            src={KrishImg}
             className={`${styles["img-path"]}`}
             alt="Image of Krishna Dhana"
           />
-        </div>
+        </motion.div>
       </div>
     </Animation>
   );

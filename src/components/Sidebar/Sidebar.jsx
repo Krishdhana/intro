@@ -1,5 +1,6 @@
 import React from "react";
 import styles from "./Sidebar.module.scss";
+import { motion } from "framer-motion";
 
 import Icon, {
   UserOutlined,
@@ -40,16 +41,14 @@ const Sidebar = () => {
   ];
 
   return (
-    <React.Fragment>
-      <ul className={styles.ul}>
+      <motion.ul  initial={{ x : '-10vw'}} animate={{x : 0}} transition={{type : 'spring', delay: 2}} className={styles.ul}>
         {menuItems.map((item) => {
           return (
-            <li>
+            <li key={item.key} >
               <NavLink
                 className={(data) => {
                   return data.isActive ? `${styles.active}` : "";
                 }}
-                key={item.key}
                 to={item.path}
               >
                 <Tooltip title={item.title} placement="right">
@@ -59,8 +58,7 @@ const Sidebar = () => {
             </li>
           );
         })}
-      </ul>
-    </React.Fragment>
+      </motion.ul>
   );
 };
 

@@ -1,4 +1,4 @@
-import { Card, Button } from "antd";
+import { Card } from "antd";
 import { motion } from "framer-motion";
 import React from "react";
 
@@ -19,12 +19,12 @@ const Apps = () => {
   ];
 
   return (
-    <React.Fragment>
+    <React.Fragment className>
       <div className="pt-5 text-orange fs-3">Apps developed while learning</div>
-      <div className="row">
+      <motion.div className="row">
         {apps.map((data) => {
           return (
-            <div className="col-auto  pt-5">
+            <div initial={{x : '100vw'}} animate={{x : 0}} transition={{type: 'spring'}}  className="col-auto  pt-5">
               <a href={data.link} target="_blank">
                 <motion.div
                   whileHover={{ scale: 0.98 }}
@@ -44,7 +44,7 @@ const Apps = () => {
             ></a>
           </Card>
         </div> */}
-      </div>
+      </motion.div>
     </React.Fragment>
     // <div className="row vh-100">
     //   <div className="col-6 pt-5">
